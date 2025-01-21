@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div id="logo">
+            <button class="menu" onclick="menubar()"><img class="icon" src="./assets/menu.png" alt="menu"></button>
             <p>Logo</p>
         </div>
-        <div id="nav-bar">
+        <div class="nav-bar">
             <div id="search-bar">
                 <div class="box">
                     <img class="icon" src="./assets/search.png" alt="search-icon">
@@ -28,15 +31,15 @@
                     <p><a href="">(0)</a></p>
                 </div>
             </div>
-                <div id="nav">
-                    <ul>
+                <div class="nav hide">
+                    <ul><strong>
                         <li><a href="#">Classes</a></li>
                         <li><a href="#">Programs & Events</a></li>
                         <li><a href="#">Blogs</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Get Involved</a></li>
                         <li><a href="#" id="nav-btn">Find a Class</a></li>
-                    </ul>
+                    </strong></ul>
                 </div>
             <nav>   
             </nav>
@@ -49,7 +52,7 @@
             <div id="head">
                  <div id="head1">
                     <div id="title">
-                        <h1>Let’s Begin Here: Approaching<br> Craft in Fiction Through Character</h1>
+                        <h1>Let’s Begin Here: Approaching Craft in Fiction Through Character</h1>
                         <ul>
                             <li>
                                 <div class="btn" style="border: 0.5px solid #434343;">
@@ -57,8 +60,11 @@
                                     <p>David William Hill</p>
                                 </div>
                             </li>
-                            <li class="btn" style="background-color:  rgba(220, 54, 54, 0.35 );">Fiction</li>
-                            <li class="btn" style="background-color: rgba(67, 67, 67, 0.5);">Advanced</li>
+                            <li class="btn" style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
+            linear-gradient(0deg, #DC3636, #DC3636);">
+                                Fiction
+                            </li><li class="btn" style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), 
+            linear-gradient(0deg, #434343, #434343);">Advanced</li>
                         </ul>
                     </div>
                     <div id="price">
@@ -76,7 +82,7 @@
                             <div class="sign-up"><p><strong>Sign Up</strong></p></div>
                         </div>
                         <div id="apply-discount">
-                            <p><strong>Apply for Reduced-Rate Spot</strong> </p>
+                            <button><strong>Apply for Reduced-Rate Spot</strong> </button>
                         </div>
                     </div> 
                  </div>
@@ -85,14 +91,13 @@
                         <img class="icon" src="./assets/calendar.png" alt="calender-icon">
                         <p><strong>Jan 05 - Feb 15 </strong> <span>(5 Wednesdays)</span> <br>10:00am - 4:00pm (PST) </p>
                     </div>
-                    <div class="info address" style="justify-content: center;">
+                    <div class="info address">
                         <img class="icon" src="./assets/location.png" alt="location-icon">
                         <p>2042 Balboa St.,<br>San Francisco, CA 94121</p>
                     </div>
-                    <div class="info" style="justify-content: flex-end;">
+                    <div class="info">
                         <img class="icon" src="./assets/clock.png" alt="clock-icon">
                         <p><strong>Registration deadline: </strong> <br>May 07 at 10:30am (PST)</p>
-                        
                     </div>
                  </div>
             </div>
@@ -148,20 +153,20 @@
                 </div>  
             </div>
             <div id="box2">
-                <button><p>&lt;</p></button>
+                <button onclick="updateMessage('previous')"><p>&lt;</p></button>
                 <div id="quote">
                     <div class="quotes"><p>“</p></div>
                     <div class="quote-text">
                         <p>
-                            <em>
-                            Erin was a wonderful teacher. She was personable, kind, organized,<br> 
-                            and great with facilitating group discussion. <br>
-                            </em>
-                                <strong>Katy L.</strong></p>
+                            <em id="quote-content">
+                            Erin was a wonderful teacher. She was personable, kind, organized,
+                            and great with facilitating group discussion. 
+                            </em><br>
+                            <strong id="author">Katy L.</strong></p>
                     </div>
                     <div class="quotes"><p>”</p></div>
                 </div> 
-                <button><p>&gt;</p></button>            
+                <button onclick="updateMessage('next')"><p>&gt;</p></button>            
             </div>
         </div>
 
@@ -171,19 +176,19 @@
 
                 <div class="classes">
                     <p>
-                        The Art of the Prose Sentence: <br>Challenging Your Sentences to Do <br>More
+                        The Art of the Prose Sentence: Challenging Your Sentences to Do More
                     </p>
                     <a href="#">Learn More ></a>
                 </div>
                 <div class="classes">
                     <p>
-                        The Art of the Prose Sentence: <br>Challenging Your Sentences to Do <br>More
+                        The Art of the Prose Sentence: Challenging Your Sentences to Do More
                     </p>
                     <a href="#">Learn More ></a>    <h1></h1>
                 </div>
                 <div class="classes">
                     <p>
-                        The Art of the Prose Sentence: <br>Challenging Your Sentences to Do <br>More
+                        The Art of the Prose Sentence: Challenging Your Sentences to Do More
                     </p>
                     <a href="#">Learn More ></a>    <h1></h1>
                 </div>
@@ -273,6 +278,8 @@
             <p>Privacy & Terms</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
 
