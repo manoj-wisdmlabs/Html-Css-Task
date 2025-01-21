@@ -25,8 +25,22 @@ let index = 0;
 function menubar() {
     var nav = document.querySelector('.nav');
     nav.classList.toggle('hide');
-
+    
+    document.addEventListener('scroll', hideNavOnEvent);
 }
+
+function hideNavOnEvent(event) {
+    var nav = document.querySelector('.nav');
+    
+    if (!nav.classList.contains('hide')) {
+        if (nav.contains(event.target)) {
+            return; 
+        }
+
+        nav.classList.add('hide');
+    }
+}
+
 
 function updateMessage(sequence) {
     var message = document.getElementById('quote-content');

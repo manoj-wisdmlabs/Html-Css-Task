@@ -30,6 +30,7 @@ ul{
     list-style: none;
 }
 
+
 button, .btn, a{
     cursor: pointer;
 }
@@ -44,7 +45,7 @@ header{
 
 #logo{
     height: 90px;
-    width: 100%;
+    width: 30%;
     text-align: center;
     line-height: 1.4rem;
     font-size: 1.2rem;
@@ -67,7 +68,7 @@ header{
 }
 
 .nav-bar{
-    width: 100%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,7 +89,6 @@ header{
     display: flex;
     align-items: center;
     gap: 10px;
-    height: 100%;   
 }
 
 .box p{
@@ -97,8 +97,9 @@ header{
 }
 .nav ul strong {
     position: fixed;
-    background-color: #ECECEC;
-    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px black;
+    width: 70%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -108,6 +109,7 @@ header{
     left: 0;
     top: 90px;
     padding: 20px;
+    padding-bottom: 50px;
 }
 
 .nav ul li a{
@@ -128,11 +130,10 @@ header{
     background-color: #ECECEC;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 15px;
 }
-
 /* course */
 #course{
     width: 100%;
@@ -153,7 +154,6 @@ header{
 }
 
 #head1{
-    height: 80%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -213,7 +213,6 @@ header{
 }
 
 .course-price .price{
-    height: 100%;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -333,7 +332,6 @@ header{
     margin-top: 30px;
 }
 
-
 .schedule h1{
     font-size: 1.5rem;
     font-weight: 900;
@@ -344,6 +342,10 @@ header{
     font-size: 1.1rem;
     line-height: 1.3rem;
     margin-top: 20px;
+}
+
+.schedule p strong{
+    margin-right: 5px;
 }
 
 #dates{
@@ -579,7 +581,11 @@ footer{
     color: white;
 }
 
-
+#rights{
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1rem;
+}
 #left{
     width: 100%;
 }
@@ -647,7 +653,6 @@ footer{
 }
 
 .search-bar div input{
-    height: 100%;
     width: 55%;
     border: none;
     border-radius: 30px;
@@ -689,6 +694,19 @@ footer{
     width: 18px;
 }
 
+
+#left p span, #left p{
+    margin-right: 10px;
+    line-height: 1.5rem;
+}
+
+#right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .icon{
@@ -727,10 +745,13 @@ footer{
     }
 
     .nav ul strong {
-        width: 40%;
+        width: 60%;
         padding-left: 40px;
     }
     
+    .schedule p strong{
+        margin-right: 20px;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -765,7 +786,8 @@ footer{
     }
 
     #box11{
-        width: 100%;
+        width: 60%;
+        padding: 20px;
     }
 
     #price{
@@ -776,7 +798,8 @@ footer{
         align-items: center;
     }
     #box12{
-        width: 50%;
+        width: 40%;
+        padding: 20px;
     }
     #box12 .img img{
         max-width: 120px;
@@ -826,6 +849,15 @@ footer{
         font-size: 1rem;
         line-height: 1.5rem;
     }
+
+    #left{
+        width: 60%;
+    }
+
+    #right{
+        width: 40%;
+        align-items: flex-end;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -844,7 +876,6 @@ footer{
     }
     
     .nav-bar{
-        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -854,9 +885,6 @@ footer{
 
     .nav-bar *{
         font-size: 0.8rem;
-    }
-    .nav ul strong li a{
-        font-size: 1rem;
     }
     
     #logo{
@@ -880,6 +908,7 @@ footer{
     .nav ul strong{
         position: static;
         background-color: #FFFFFF;
+        box-shadow: none;
         height: auto;
         width: 100%;
         display: flex;
@@ -887,14 +916,14 @@ footer{
         justify-content: space-between;
         align-items: center;
         padding: 5px;
-        gap: 20px;
+        gap: 10px;
     }
 
     .nav ul li a{
         display: inline;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 700;
-        line-height: 2rem;
+        line-height: 1.7rem;
     }
 
     #search-bar{
@@ -908,8 +937,7 @@ footer{
         width: fit-content;
         display: flex;
         align-items: center;
-        gap: 10px;
-        height: 100%;   
+        gap: 10px; 
     }
 
     .box p a{
@@ -955,10 +983,10 @@ footer{
     #course-details{
         width: 100%;
         display: flex;
-        flex-direction: colums;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 40px 80px ;
+        padding: 40px 80px;
     }
 
     #about{
@@ -992,6 +1020,14 @@ footer{
     #conditions{
         margin: 40px 0;
     }
+
+    #left{
+        width: 60%;
+    }
+
+    #right{
+        width: 40%;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -1010,7 +1046,6 @@ footer{
     }
     
     .nav-bar{
-        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
